@@ -16,11 +16,11 @@ const VideoCard = (props) => {
     profilePic,
     setVideoRef,
     autoplay,
-    onProfileClick
+    onProfileClick,
   } = props;
 
   const videoRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   // Auto play video if autoplay = true
   useEffect(() => {
@@ -29,11 +29,12 @@ const VideoCard = (props) => {
     }
   }, [autoplay]);
 
-  // Toggle mute/unmute
+  // Toggle mute/unmute (được truyền xuống FooterRight qua onMuteToggle)
   const handleMuteToggle = () => {
     if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
+      const newMuted = !videoRef.current.muted;
+      videoRef.current.muted = newMuted;
+      setIsMuted(newMuted);
     }
   };
 
@@ -50,23 +51,24 @@ const VideoCard = (props) => {
 
   return (
     <div className="video">
-
       {/* ------------------ VIDEO ELEMENT ------------------ */}
       <video
         className="player"
         onClick={onVideoPress}
         ref={(ref) => {
           videoRef.current = ref;
-          setVideoRef(ref);
+          // tránh lỗi nếu setVideoRef không được truyền từ parent
+          if (typeof setVideoRef === "function") {
+            setVideoRef(ref);
+          }
         }}
         loop
-        muted
+        muted={isMuted}   // 🔥 gắn với state isMuted
         src={url}
       />
 
       {/* ------------------ FOOTER OVER VIDEO ------------------ */}
       <div className="bottom-controls">
-
         {/* LEFT SIDE */}
         <div className="footer-left">
           <FooterLeft
@@ -90,9 +92,7 @@ const VideoCard = (props) => {
             onProfileClick={onProfileClick}
           />
         </div>
-
       </div>
-
     </div>
   );
 };
