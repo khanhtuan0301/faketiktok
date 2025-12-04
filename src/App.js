@@ -8,9 +8,9 @@ import TopNavbar from './components/TopNavbar';
 const videoUrls = [
   {
     url: require('./videos/video1.mp4'),
-    profilePic: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/9d429ac49d6d18de6ebd2a3fb1f39269~c5_100x100.jpeg?x-expires=1688479200&x-signature=pjH5pwSS8Sg1dJqbB1GdCLXH6ew%3D',
-    username: 'csjackie',
-    description: 'Lol nvm #compsci #chatgpt #ai #openai #techtok',
+    profilePic: 'https://i.pinimg.com/736x/52/82/ea/5282ea1d4ede83b5f8f2f842073b476a.jpg',
+    username: 'MEME1',
+    description: 'ĐỔI AVT 1',
     song: 'Original sound - Famed Flames',
     likes: 430,
     comments: 13,
@@ -19,9 +19,9 @@ const videoUrls = [
   },
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/eace3ee69abac57c39178451800db9d5~c5_100x100.jpeg?x-expires=1688479200&x-signature=wAkVmwL7lej15%2B16ypSWQOqTP8s%3D',
-    username: 'dailydotdev',
-    description: 'Every developer brain @francesco.ciulla #developerjokes #programming #programminghumor #programmingmemes',
+    profilePic: 'https://i.pravatar.cc/150?img=5',
+    username: 'namuit',
+    description: 'ReactJS Lab 4 #uit',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
     likes: '13.4K',
     comments: 3121,
@@ -30,9 +30,9 @@ const videoUrls = [
   },
   {
     url: require('./videos/video3.mp4'),
-    profilePic: 'https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4e6698b235eadcd5d989a665704daf68~c5_100x100.jpeg?x-expires=1688479200&x-signature=wkwHDKfNuIDqIVHNm29%2FRf40R3w%3D',
-    username: 'wojciechtrefon',
-    description: '#programming #softwareengineer #vscode #programmerhumor #programmingmemes',
+    profilePic: 'https://i.pravatar.cc/150?img=7',
+    username: 'tiktok_fake',
+    description: 'Fake TikTok but real code 💻',
     song: 'help so many people are using my sound - Ezra',
     likes: 5438,
     comments: 238,
