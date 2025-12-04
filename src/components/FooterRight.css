@@ -62,3 +62,95 @@
     transform: rotate(360deg);
   }
 }
+
+/* Overlay mờ toàn màn hình */
+.share-popup-overlay {
+  position: fixed;
+  inset: 0; /* top:0; left:0; right:0; bottom:0 */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hộp popup */
+.share-popup {
+  background: #121212;
+  color: #fff;
+  padding: 16px 18px;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header popup */
+.share-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.share-popup-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.share-close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Danh sách option */
+.share-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.share-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.share-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Icon tròn */
+.share-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-icon.facebook {
+  background: #1877f2;
+}
+
+.share-icon.instagram {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fdf497 0,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.share-icon.threads {
+  background: #000;
+}
